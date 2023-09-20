@@ -1,0 +1,50 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2
+HTTP 1 (Hypertext Transfer Protocol version 1) is the original version of the HTTP protocol, which is used for 
+communication between web servers and clients, such as web browsers. HTTP 1.0 was introduced in 1996, and HTTP 1.1 was 
+introduced in 1999.HTTP 1.0 uses a simple request-response model, where a client sends a request to a server, and the 
+server sends a response back to the client. 
+
+1.It works on the textual format.
+2.There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+3.It uses requests resource Inlining for use getting multiple pages.
+4.It compresses data by itself.
+
+HTTP/2 (Hypertext Transfer Protocol version 2) is an updated version of the HTTP protocol, which was introduced in 2015. 
+It was designed to address some of the limitations and performance issues of HTTP/1.1 and improve the speed and efficiency 
+of web communication.
+
+1.It works on the binary protocol.
+2.It allows multiplexing so one TCP connection is required for multiple requests.
+3.It uses PUSH frame by server that collects all multiple pages 
+4.It uses HPACK for data compression.
+
+2.Write a blog about objects and its internal representation in Javascript
+------------------
+The primitive data types in Javascript are string, number, boolean, null, undefined, symbol, bigint.
+These hold only one value and does not have any properties or methods.
+Objects in Javascript can contain many values. 
+The values are written as key value pairs are called properties.
+We can also create a new Object as below.
+
+Example:
+const person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+	(or)
+const person = {
+firstName:"John", 
+lastName:"Doe", 
+age:50,
+eyeColor:"blue"
+};
+
+We can access the property of the object as below
+person.firstName, person.lastName, person.age, person.eyeColor
+
+We can add new property to an existing object by giving it a value.
+person.nationality = "English";
+
+We can delete a property from an existing object by using keyword delete.
+delete person.age;
